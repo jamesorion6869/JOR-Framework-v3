@@ -1,0 +1,13 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Logs or temporary CSV outputs
+*.csv
+*.png
+
+# Word documents / internal docs
+*.docx
+
+# Editor / IDE folders
+.vscode/

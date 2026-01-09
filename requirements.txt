@@ -1,0 +1,7 @@
+Requirements
+
+numpy
+pymc
+arviz
+matplotlib
+colorama
