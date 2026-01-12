@@ -1,7 +1,6 @@
 Requirements
 
-numpy
-pymc
-arviz
-matplotlib
-colorama
+pymc>=5.15,<6       # no GPL deps, Apache-2, FIPS-safe
+numpy>=1.25,<2
+arviz>=0.15,<1
+matplotlib>=3.8,<4
