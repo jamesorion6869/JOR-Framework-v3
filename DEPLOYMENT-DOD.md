@@ -10,13 +10,13 @@ RHEL 8.x (STIG applied), offline or restricted-network environment, no elevated 
 
 Python 3.10 from EPEL (STIG ID: RHEL-08-00-010292)
 
-# Install Python 3.10 and pip
+### Install Python 3.10 and pip
 sudo dnf install python3.10 python3-pip -y
 
-# Create isolated virtual environment
+### Create isolated virtual environment
 python3.10 -m venv /opt/jor
 
-# Install dependencies in the virtual environment
+### Install dependencies in the virtual environment
 /opt/jor/bin/pip install -r requirements.txt --no-deps --no-cache
 
 ## Runtime Controls
