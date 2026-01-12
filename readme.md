@@ -26,11 +26,12 @@ This separation prevents conflation of anomalous observations with unsupported o
 
 ## Requirements
 
+All dependencies are FIPS-compliant and MIT licensed
 - Python 3.10 or higher
-- numpy
-- pymc
-- arviz
-- matplotlib (optional, for visualization)
+- numpy>=1.25,<2 
+- pymc>=5.15,<6 # Apache-2, FIPS-safe, no GPL deps
+- arviz>=0.15,<1
+- matplotlib>=3.8,<4 (optional, for visualization)
 
 ---
 
