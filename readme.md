@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the reference implementation of the James Orion Report (JOR) Bayesian Fusion Framework, a structured probabilistic system for evaluating UAP cases.
+This repository contains the reference implementation of the James Orion Report (JOR) Bayesian Fusion Framework, a structured probabilistic triage framework (SPTF) system for evaluating UAP cases.
 
 The framework separates:
 
