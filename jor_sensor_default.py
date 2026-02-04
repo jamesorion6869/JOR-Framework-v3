@@ -1,5 +1,5 @@
 """
-JOR Bayesian Fusion Framework (v5)
+JOR Bayesian Fusion Framework (v3)
 Methodology by: James Orion
 Implementation: Jake James
 Calibration: K=0.20 (Aligned with AARO 2024 Uncertainty Standards)
@@ -331,3 +331,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+
