@@ -11,7 +11,10 @@ The framework separates:
 
 This separation prevents conflation of anomalous observations with unsupported origin claims.
 
----
+The repository now includes two scripts:
+
+- **`jor_fusion.py`** — full interactive scoring interface for cases with human witnesses or sensor data  
+- **`jor_sensor_default.py`** — variant that automatically assigns C = 0.30 for camera/system-only cases (minimal weak witness), with optional human witness scoring. This allows sensor-only cases to be processed while preserving the evidentiary logic of the framework.
 
 ## Intended Use
 
@@ -22,8 +25,6 @@ This separation prevents conflation of anomalous observations with unsupported o
 
 **Note:** This tool is not designed to assert extraterrestrial origin.
 
----
-
 ## Requirements
 
 All dependencies are FIPS-compliant and MIT licensed
@@ -33,47 +34,46 @@ All dependencies are FIPS-compliant and MIT licensed
 - arviz>=0.15,<1
 - matplotlib>=3.8,<4 (optional, for visualization)
 
----
-
 ## Installation
 
 To install the required Python packages, run:
 
-```bash
 pip install pymc arviz matplotlib
-```
 
----
+## Running the Scripts
 
-## Running the Script
+Run the interactive scripts from the project directory:
 
-Run the interactive script from the project directory:
+python jor_fusion.py  
+python jor_sensor_default.py
 
-```bash
-python jor_fusion.py
-```
+**Notes:**
 
-The script will prompt for rubric-based scoring inputs, including:
+- `jor_fusion.py` is the full scoring interface, for cases with human witnesses or detailed sensor analysis  
+- `jor_sensor_default.py` is optimized for sensor-only cases; it automatically sets **C = 0.30** for camera/system-only evidence, but allows scoring C higher if a human witness is present
+
+The scripts will prompt for rubric-based scoring inputs, including:
 
 - Witness credibility
 - Environmental conditions
 - Physical/sensor evidence
+- Flight behavior modifiers
 - Prior skepticism setting (K-constant)
 
 Manual override is available: the user can skip full scoring and enter SOP and NHP directly if desired.
 
----
-
 ## Output
 
-The script produces:
+The scripts produce:
 
 - Posterior SOP
 - Posterior NHP
 - Optional CSV export for record-keeping or comparative analysis
 - Optional visualization comparing prior vs posterior probabilities
 
----
+For the sensor-default script:
+
+- The CSV logs whether a human witness was present and records key constants for reproducibility
 
 ## Interpretation Guidance
 
@@ -82,7 +82,10 @@ The script produces:
 - Posterior NHP is a conditional risk indicator, not an origin claim
 - Users may refer to the JOR Framework v3 Organizational User Manual for full triage guidance
 
----
+Additional notes for the sensor-default variant:
+
+- `C = 0.30` indicates camera/system-only evidence
+- `C` will be higher if human witnesses are scored
 
 ## Organizational Triage Notes (Optional)
 
@@ -90,19 +93,13 @@ The script produces:
 - Posterior NHP 0.26 – 0.45: Monitor, anomalous, cross-reference with historical or sensor data
 - Posterior NHP 0.46 – 0.56: Priority, active investigation recommended
 
----
-
 ## Conservative vs Exploratory Use Modes
 
 - **Standard reporting mode:** PRIOR_NH = 0.20, K = 0.20, for public-facing or institutional reports
 - **Exploratory/R&D mode:** lower PRIOR_NH or K may be used for internal testing and sensitivity analysis
 
----
-
 ## Citation
 
 If using this tool in research or analysis, please cite the associated JOR Fusion Paper (v3) on Zenodo.
-
-
 
 
