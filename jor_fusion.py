@@ -78,7 +78,7 @@ C_base_scores = {
 }
 
 C_modifiers = {
-    "Independent written reports": 0.03,
+    "Independent written reports or time-stamped logs": 0.03,
     "Witnesses from >2 independent positions": 0.02,
     "Witness inconsistencies": -0.03,
     "Known misidentification / unreliable": -0.05
@@ -121,7 +121,6 @@ P_modifiers = {
     "Independent lab analysis": 0.02,
     "Ambiguous/poor video quality": -0.05,
     "Inconsistent sensor readings": -0.07,
-    "Time-stamped logs": 0.02
 }
 
 P_hard_caps = {
