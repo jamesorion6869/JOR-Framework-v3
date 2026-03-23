@@ -94,8 +94,8 @@ C_hard_caps = {
 }
 
 E_base_scores = {
-    "Weak": "0.30-0.45: Fog, heavy cloud, night, brief duration (<10s)",
-    "Moderate": "0.50-0.60: Partial obstruction, moderate duration",
+    "Weak": "0.30-0.45: Fog, heavy cloud, night with no illumination, brief duration (<10s)",
+    "Moderate": "0.50-0.60: Light cloud, partially obstructed view, nighttime with some illumination, moderate duration (10-30s)",
     "Strong": "0.65-0.85: Clear sky OR controlled environment; long duration"
 }
 
