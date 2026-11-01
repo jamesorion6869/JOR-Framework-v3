@@ -102,6 +102,6 @@ Additional notes for the sensor-default variant:
 
 If using this tool in research or analysis, please cite the associated JOR Fusion Paper (v3) on Zenodo.
 
-[MIT](LICENSE.txt) — Copyright (c) 2026 Jake James
+[MIT](LICENSE) — Copyright (c) 2026 Jake James
 
 
